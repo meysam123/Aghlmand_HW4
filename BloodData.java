@@ -25,4 +25,14 @@ public class BloodData {
         else if(rhFactor=='-')
             this.rhFactor=false;
     }
+
+    public char getBloodType() {
+        return bloodType;
+    }
+    public char getRhFactor(){
+        if(this.rhFactor)
+            return '+';
+        else
+            return '-';
+    }
 }
