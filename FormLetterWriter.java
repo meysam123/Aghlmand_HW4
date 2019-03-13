@@ -5,4 +5,3 @@ public class FormLetterWriter {
     public static void displaySalutation(String FirstName,String LastName){
         System.out.println("Greeting Dear "+FirstName+" "+LastName);
     }
-}
