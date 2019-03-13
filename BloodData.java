@@ -1,4 +1,5 @@
 public class BloodData {
-    private String bloodType;
+    private char bloodType;
     private boolean rhFactor;
+
 }
