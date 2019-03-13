@@ -6,4 +6,8 @@ public class Billing {
         System.out.println("The Total due "+price*(1+Billing.tax));
         return price*(1+Billing.tax);
     }
+    public static double computeBill(double price,int quantity){
+        System.out.println("The Total due "+price*quantity*(1+Billing.tax));
+        return price*quantity*(1+Billing.tax);
+    }
 }
