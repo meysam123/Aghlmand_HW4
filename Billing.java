@@ -10,4 +10,8 @@ public class Billing {
         System.out.println("The Total due "+price*quantity*(1+Billing.tax));
         return price*quantity*(1+Billing.tax);
     }
+    public static double computeBill(double price,int quantity,int coupon){
+        System.out.println("the Total due"+(price*quantity-coupon)*(1+Billing.tax));
+        return (price*quantity-coupon)*(1+Billing.tax);
+    }
 }
