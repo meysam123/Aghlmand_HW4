@@ -5,9 +5,14 @@ public class BloodData {
         this.bloodType='O';
         this.rhFactor=true;
     }
-    public BloodData(char bloodType,boolean rhFactor){
+    public BloodData(char bloodType,char rhFactor){
         this.bloodType=bloodType;
-        this.rhFactor=rhFactor;
+
+        if(rhFactor=='+')
+            this.rhFactor=true;
+        else if(rhFactor=='-')
+            this.rhFactor=false;
+
     }
 
     public void setBloodType(char bloodType) {
