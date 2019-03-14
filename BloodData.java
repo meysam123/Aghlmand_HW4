@@ -1,12 +1,15 @@
 public class BloodData {
-    private char bloodType;
+    private String bloodType;
     private boolean rhFactor;
     public BloodData(){
-        this.bloodType='O';
+        this.bloodType="O";
         this.rhFactor=true;
     }
-    public BloodData(char bloodType,char rhFactor){
-        this.bloodType=bloodType;
+    public BloodData(String bloodType,char rhFactor){
+        if(!bloodType.equals("A")&&!bloodType.equals("B")&&!bloodType.equals("AB")&&!bloodType.equals("O"))
+            throw new IllegalArgumentException("Valid Blod Type are: A,B,AB,O");
+        else
+            this.bloodType=bloodType;
 
         if(rhFactor=='+')
             this.rhFactor=true;
@@ -15,8 +18,11 @@ public class BloodData {
 
     }
 
-    public void setBloodType(char bloodType) {
-        this.bloodType = bloodType;
+    public void setBloodType(String bloodType) {
+        if(!bloodType.equals("A")&&!bloodType.equals("B")&&!bloodType.equals("AB")&&!bloodType.equals("O"))
+            throw new IllegalArgumentException("Valid Blood Type are: A,B,AB,O");
+        else
+            this.bloodType = bloodType;
     }
 
     public void setRhFactor(char rhFactor) {
@@ -26,7 +32,7 @@ public class BloodData {
             this.rhFactor=false;
     }
 
-    public char getBloodType() {
+    public String getBloodType() {
         return bloodType;
     }
     public char getRhFactor(){
